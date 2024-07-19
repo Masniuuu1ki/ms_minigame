@@ -12,26 +12,18 @@ function startGame()
 
     local promise = promise.new()
 
-    Citizen.CreateThread(function()
-        while isMinigameActive do
-            Citizen.Wait(100)
-        end
-
-        SetNuiFocus(false, false)
-
+    RegisterNUICallback('minigameResult', function(data, cb)
+        success = data.success
+        isMinigameActive = false
+        cb('ok')
         promise:resolve(success)
+        SetNuiFocus(false, false)
     end)
 
     return Citizen.Await(promise)
 end
 
 exports('startGame', startGame)
-
-RegisterNUICallback('minigameResult', function(data, cb)
-    success = data.success
-    isMinigameActive = false
-    cb('ok')
-end)
 
 RegisterCommand('testGame', function()
     local result = exports['ms_minigame']:startGame()
