@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ms_minigame</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container containerHidden" id="gameContainer">
+        <div class="loading-screen" id="loadingScreen">
+            <div class="loading-message">Przygotuj się...</div>
+            <div class="countdown" id="countdown">5</div>
+        </div>
+        <header class="game-header">
+            <div class="instructions">Odtwórz sekwencję kliknięć!</div>
+        </header>
+        <div class="progress-bar" id="progressBarContainer">
+            <div class="progress" id="progressBar"></div>
+        </div>
+        <div class="grids">
+            <div class="grid" id="playerGrid">
+                <div class="cell" data-index="0"></div>
+                <div class="cell" data-index="1"></div>
+                <div class="cell" data-index="2"></div>
+                <div class="cell" data-index="3"></div>
+                <div class="cell" data-index="4"></div>
+                <div class="cell" data-index="5"></div>
+                <div class="cell" data-index="6"></div>
+                <div class="cell" data-index="7"></div>
+                <div class="cell" data-index="8"></div>
+            </div>
+            <div class="grid" id="computerGrid">
+                <div class="cell" data-index="0"></div>
+                <div class="cell" data-index="1"></div>
+                <div class="cell" data-index="2"></div>
+                <div class="cell" data-index="3"></div>
+                <div class="cell" data-index="4"></div>
+                <div class="cell" data-index="5"></div>
+                <div class="cell" data-index="6"></div>
+                <div class="cell" data-index="7"></div>
+                <div class="cell" data-index="8"></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
