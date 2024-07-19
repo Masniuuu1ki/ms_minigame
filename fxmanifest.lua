@@ -6,23 +6,6 @@ author 'Masniuuu1ki'
 
 client_scripts {
     'client.lua',
-    'config.lua',
-}
-
-shared_scripts {
-    '@ox_lib/init.lua',
-    'config.lua',
-}
-
-server_scripts {
-    'server.lua',
-    '@oxmysql/lib/MySQL.lua',
-    'config.lua',
-}
-
-dependencies {
-    'es_extended',
-    'ox_lib',
 }
 
 ui_page 'html/index.html'
