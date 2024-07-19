@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
         sequence.push(Math.floor(Math.random() * 9));
         playerSequence = [];
         playerTurn = false;
-        playSequence();
+        setTimeout(playSequence, 1000);
     }
 
     function resetTimer() {
